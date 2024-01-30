@@ -1,0 +1,127 @@
+.card {
+    --font-color: #323232;
+    --bg-color: #e0e0e0;
+    width: 15.625em;
+        height: 21.875em;
+    border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: -9px 9px 18px #5a5a5a,
+        9px -9px 18px #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 2px #5a5a5a;
+}
+
+.card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background-color: blueviolet;
+}
+
+.card__descr-wrapper {
+    padding: 15px;
+    display: grid;
+}
+
+.card__title {
+    color: var(--font-color);
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.card__descr {
+    color: var(--font-color);
+}
+
+.svg {
+    width: 25px;
+    height: 25px;
+    transform: translateY(25%);
+    fill: var(--font-color);
+}
+
+.card__links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+}
+
+.card__links .link {
+    color: var(--font-color);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+
+
+/* For devices up to 768px width (typical tablets and smaller devices) */
+@media screen and (max-width: 768px) {
+    .card {
+        width: 12.5em;
+        /* Adjust width to fit the screen */
+        height: 17.5em;
+        /* Allow height to adjust according to content */
+        border-radius: 15px;
+        /* Reduce border radius for smaller screens */
+        box-shadow: -5px 5px 10px #5a5a5a, 5px -5px 10px #ffffff;
+        /* Adjust box-shadow for smaller card size */
+    }
+
+    .card:hover {
+        transform: none;
+        /* Disable scaling on hover for smaller screens */
+        box-shadow: none;
+        /* Remove box-shadow on hover for smaller screens */
+    }
+
+    .card__descr-wrapper {
+        padding: 10px;
+        /* Adjust padding */
+    }
+
+    .card__title {
+        font-size: 14px;
+        /* Adjust font size */
+        margin-bottom: 10px;
+        /* Adjust margin */
+    }
+
+    .card__descr {
+        font-size: 14px;
+        /* Adjust font size */
+    }
+
+    .svg {
+        width: 20px;
+        /* Adjust SVG size */
+        height: 20px;
+        /* Adjust SVG size */
+        transform: none;
+        /* Reset transform */
+        fill: var(--font-color);
+        /* Maintain font color */
+    }
+
+    .card__links {
+        margin-top: 8px;
+        /* Adjust margin */
+    }
+
+    .card__links .link {
+        font-size: 13px;
+        /* Adjust font size */
+    }
+}
